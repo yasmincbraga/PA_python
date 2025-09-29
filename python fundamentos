@@ -1,0 +1,78 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPuiUfcWsjZF6xvnbjf7cQL",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/yasmincbraga/PA_python/blob/main/python%20fundamentos\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "O_am55WrwYVW",
+        "outputId": "09917650-9ed9-4cbd-8765-34f892a1342d"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "tênue\n"
+          ]
+        }
+      ],
+      "source": [
+        "import random\n",
+        "palavrinha =  [\"afeto\", \"algoz\", \"amigo\", \"âmago\", \"anexo\", \"aquém\", \"assim\", \"audaz\",\"cerne\", \"dengo\", \"desde\", \"então\", \"etnia\", \"ética\", \"expor\", \"êxito\",\"fazer\", \"fosse\", \"fútil\", \"haver\", \"honra\", \"ícone\", \"ideia\", \"inato\",\"justo\", \"lapso\", \"mexer\", \"moral\", \"muito\", \"mútua\", \"negro\", \"nobre\",\"porém\", \"plena\", \"poder\", \"quiçá\", \"razão\", \"sagaz\", \"sanar\", \"seção\",\"senso\", \"sonho\", \"sobre\", \"sutil\", \"tange\", \"tempo\", \"tênue\", \"termo\",\"torpe\", \"vigor\", \"égide\"]\n",
+        "tentativa = 5\n",
+        "\n",
+        "palavra = random.choice(palavrinha)\n",
+        "print(palavra)\n",
+        "\n",
+        "\n",
+        "while True:\n",
+        "  guesswhat = input(\"Tente acertar a palavra: \")\n",
+        "\n",
+        "\n",
+        "  if len(guesswhat) != 5:\n",
+        "    print(f\"A palavra deve ter cinco letras. essa palavra tem {len(guesswhat)} letras\")\n",
+        "    guesswhat = input(\"Tente acertar a palavra: \")\n",
+        "  else:\n",
+        "    break\n",
+        "letras_guesswhat = list(guesswhat)\n",
+        "letras_reposta = list(palavra)\n",
+        "letras = ['_','_','_','_','_']\n",
+        "for i in range(0, 5):\n",
+        "  if letras_guesswhat[i] == letras_reposta[i]:\n",
+        "    letras[i]=(letras_guesswhat[i])\n",
+        "    print(letras)\n",
+        "\n",
+        "\n"
+      ]
+    }
+  ]
+}
